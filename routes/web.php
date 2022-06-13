@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CandidateController;
 use App\Http\Controllers\CriteriaController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('criterias', CriteriaController::class);
+Route::resource('candidates', CandidateController::class);

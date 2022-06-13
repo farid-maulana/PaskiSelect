@@ -69,8 +69,8 @@
                 <div data-i18n="Criteria">Kriteria Penilaian</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ (request()->segment(1) == 'candidates') ? 'active' : '' }}">
+            <a href="{{ route('candidates.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="User">Calon Paskibraka</div>
             </a>
