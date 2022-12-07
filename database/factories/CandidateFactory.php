@@ -17,7 +17,10 @@ class CandidateFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'date_of_birth' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
+            'gender' => $this->faker->randomElement($array = array ('L','P')),
+            'phone_number' => $this->faker->phoneNumber(),
         ];
     }
 }

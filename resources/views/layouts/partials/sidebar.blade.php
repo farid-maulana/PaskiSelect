@@ -75,8 +75,8 @@
                 <div data-i18n="User">Calon Paskibraka</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ (request()->segment(1) == 'evaluations') ? 'active' : '' }}">
+            <a href="{{ route('evaluations.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-award"></i>
                 <div data-i18n="User">Penilaian Calon</div>
             </a>
